@@ -1,0 +1,20 @@
+{% load static %}
+
+<header class="header">
+    {% if user.is_authenticated %}
+        <span>
+            {{ user }}
+        </span>
+        <a href="/logout">
+            Выйти
+        </a>
+    {% else %}
+        <a href="/register">
+            Регистрация
+        </a>
+        <a href="/login">
+            Войти
+        </a>
+    {% endif %}
+
+</header>
