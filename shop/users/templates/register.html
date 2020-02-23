@@ -34,6 +34,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a>
 						<p><a href="javascript:;" class="simpleCart_empty">Очистить</a></p>
 						<div class="clearfix"> </div>
+                            {% include 'header.html' with user=user %}
 					</div>
 				</div>
 				<div class="clearfix"></div>
@@ -43,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--top-header-->
 	<!--start-logo-->
 	<div class="logo">
-		<a href="index.html"><h1>Clock Shop</h1></a>
+		<a href="http://127.0.0.1:8000/"><h1>Clock Shop</h1></a>
 	</div>
 	<!--start-logo-->
 	<!--bottom-header-->
@@ -52,7 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header">
 				<div class="col-md-9 header-left">
 				<div class="top-nav">
-					<ul class="memenu skyblue"><li class="active"><a href="index.html">Главная</a></li>
+					<ul class="memenu skyblue"><li class="active"><a href="main.html">Главная</a></li>
 						<li class="grid"><a href="#">Каталог</a>
 							<div class="mepanel">
 								<div class="row">
@@ -104,7 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="breadcrumbs-main">
 				<ol class="breadcrumb">
-					<li><a href="index.html">Главная</a></li>
+					<li><a href="http://127.0.0.1:8000/">Главная</a></li>
 					<li class="active">Регистрация</li>
 				</ol>
 			</div>
@@ -118,15 +119,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h2>REGISTER</h2>
 			</div>
 			<div class="register-main">
-				<form class="col-md-6 account-left" method="post" action="/register">
-					{% csrf_token %}
-					{{ form }}
-				</form>
+				<div class="col-md-6 account-left">
+                    <form  method="post" action="/register">
+                        {% csrf_token %}
+                        {{ form }}
+
+				</div>
 				<div class="clearfix"></div>
 			</div>
 			<div class="address submit">
-							<input class="submit-btn" type="submit">
-						</div>
+							<input class="submit-btn" type="submit" value="Подтвердить">
+			</div>
+                    </form>
 		</div>
 	</div>
 	<!--register-end-->

@@ -35,6 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a>
 						<p><a href="javascript:;" class="simpleCart_empty">Очистить</a></p>
 						<div class="clearfix"> </div>
+						 {% include 'header.html' with user=user %}
 					</div>
 				</div>
 				<div class="clearfix"></div>
@@ -44,7 +45,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--top-header-->
 	<!--start-logo-->
 	<div class="logo">
-		<a href="index.html"><h1>Clock Shop</h1></a>
+		<a href="http://127.0.0.1:8000/"><h1>Clock Shop</h1></a>
 	</div>
 	<!--start-logo-->
 	<!--bottom-header-->
@@ -53,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header">
 				<div class="col-md-9 header-left">
 				<div class="top-nav">
-					<ul class="memenu skyblue"><li class="active"><a href="index.html">Главная</a></li>
+					<ul class="memenu skyblue"><li class="active"><a href="http://127.0.0.1:8000/">Главная</a></li>
 						<li class="grid"><a href="#">Каталог</a>
 							<div class="mepanel">
 								<div class="row">
@@ -99,7 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="breadcrumbs-main">
 				<ol class="breadcrumb">
-					<li><a href="index.html">Главная</a></li>
+					<li><a href="main.html">Главная</a></li>
 					<li class="active">Учетная запись</li>
 				</ol>
 			</div>
@@ -116,13 +117,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-6 account-left">
 					<h3>Существующий пользователь</h3>
 					<div class="account-bottom">
-						<input placeholder="Email" type="text" tabindex="3" required>
-						<input placeholder="Пароль" type="password" tabindex="4" required>
-						<div class="address">
-							<a class="forgot" href="#">Забыли свой пароль?</a>
-							<input type="submit" value="Войти">
-						</div>
-					</div>
+						<form action="/login" method="post">
+				            {% csrf_token %}
+				            <input name="username" type="text" placeholder="username">
+				            <input name="password" type="password" placeholder="password">
+				            <input class="submit-btn" type="submit">
+        				</form>
+        			</div>
 				</div>
 				<div class="col-md-6 account-right account-left">
 					<h3>Новый пользователь?</h3>

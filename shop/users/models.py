@@ -26,10 +26,10 @@ class User(AbstractUser):
 
     is_locked = models.BooleanField(default=False)
 
-#    def get_active_test_suite(self):
-#        return self.test_suites.get(
-#            is_active=True
-#        )
+    def get_active_test_suite(self):
+        return self.test_suites.get(
+            is_active=True
+        )
 
     def get_initial_key(self):
         initial_key = "".join(random.sample(APHABET, 256))
