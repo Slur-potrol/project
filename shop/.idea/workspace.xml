@@ -2,15 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="314a4d50-454f-4b21-87c6-0416bb41786f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/products/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/landing/templates/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/landing/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/landing/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/landing/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/landing/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/confirmation_success.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/landing/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/landing/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/p-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/p-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/p-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/p-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/p-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/p-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/p-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/s-icons.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,10 +95,10 @@
       <screen x="45" y="21" width="1321" height="747" />
     </state>
     <state x="213" y="21" key="SettingsEditor/45.21.1321.747@45.21.1321.747" timestamp="1582381642833" />
-    <state x="460" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1582464848334">
+    <state x="460" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1582715664161">
       <screen x="45" y="21" width="1321" height="747" />
     </state>
-    <state x="460" y="260" key="com.intellij.ide.util.TipDialog/45.21.1321.747@45.21.1321.747" timestamp="1582464848334" />
+    <state x="460" y="260" key="com.intellij.ide.util.TipDialog/45.21.1321.747@45.21.1321.747" timestamp="1582715664161" />
     <state x="368" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1582382246106">
       <screen x="45" y="21" width="1321" height="747" />
     </state>

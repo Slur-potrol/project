@@ -1,202 +1,35 @@
-<!DOCTYPE html>
+{% extends 'main.html' %}
 {% load static %}
 
-<html>
-<head>
-<title>Clock Shop</title>
-<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
-<script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
-<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Clock Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="{% static 'js/simpleCart.min.js' %}"> </script>
-<link href="{% static 'css/memenu.css' %}" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="js/memenu.js"></script>
-<script>$(document).ready(function(){$(".memenu").memenu();});</script>
-<script src="{% static 'js/jquery.easydropdown.js' %}"></script>
-</head>
-<body>
-	<!--top-header-->
-	<div class="top-header">
-		<div class="container">
-			<div class="top-header-main">
-				<div class="col-md-6 top-header-left">
-				</div>
-				<div class="col-md-6 top-header-left">
-					<div class="cart box_1">
-						<a href="checkout.html">
-							<div class="total">
-								<span class="simpleCart_total"></span></div>
-								<img src="{% static 'images/cart-1.png' %}" alt="" />
-						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Очистить</a></p>
-						<div class="clearfix"> </div>
-                            {% include 'header.html' with user=user %}
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
+{% block content %}
+<div class="breadcrumbs">
+	<div class="container">
+		<div class="breadcrumbs-main">
+			<ol class="breadcrumb">
+				<li><a href="/main">Главная</a></li>
+				<li class="active">Регистрация</li>
+			</ol>
 		</div>
 	</div>
-	<!--top-header-->
-	<!--start-logo-->
-	<div class="logo">
-		<a href="http://127.0.0.1:8000/"><h1>Clock Shop</h1></a>
-	</div>
-	<!--start-logo-->
-	<!--bottom-header-->
-	<div class="header-bottom">
-		<div class="container">
-			<div class="header">
-				<div class="col-md-9 header-left">
-				<div class="top-nav">
-					<ul class="memenu skyblue"><li class="active"><a href="main.html">Главная</a></li>
-						<li class="grid"><a href="#">Каталог</a>
-							<div class="mepanel">
-								<div class="row">
-									<div class="col1 me-one">
-										<h4>Магазин</h4>
-										<ul>
-											<li><a href="products.html">Новые поступления</a></li>
-											<li><a href="products.html">Часы</a></li>
-											<li><a href="checkout.html">Моя корзина</a></li>
-										</ul>
-									</div>
-									<div class="col1 me-one">
-										<h4>Популярные бренды</h4>
-										<ul>
-											<li><a href="products.html">499 Store</a></li>
-											<li><a href="products.html">Fastrack</a></li>
-											<li><a href="products.html">Casio</a></li>
-											<li><a href="products.html">Fossil</a></li>
-											<li><a href="products.html">Maxima</a></li>
-											<li><a href="products.html">Timex</a></li>
-											<li><a href="products.html">TomTom</a></li>
-											<li><a href="products.html">Titan</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="grid"><a href="typo.html">Блог</a>
-						</li>
-						<li class="grid"><a href="contact.html">Контакты</a>
-						</li>
-					</ul>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="col-md-3 header-right">
-				<div class="search-bar">
-					<input type="text" value="Поиск" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-					<input type="submit" value="">
-				</div>
-			</div>
-			<div class="clearfix"> </div>
-			</div>
+</div>
+<div class="register">
+	<div class="container">
+		<div class="register-top heading">
+			<h2>РЕГИСТРАЦИЯ</h2>
 		</div>
-	</div>
-	<!--bottom-header-->
-	<!--start-breadcrumbs-->
-	<div class="breadcrumbs">
-		<div class="container">
-			<div class="breadcrumbs-main">
-				<ol class="breadcrumb">
-					<li><a href="http://127.0.0.1:8000/">Главная</a></li>
-					<li class="active">Регистрация</li>
-				</ol>
-			</div>
-		</div>
-	</div>
-	<!--end-breadcrumbs-->
-	<!--register-starts-->
-	<div class="register">
-		<div class="container">
-			<div class="register-top heading">
-				<h2>REGISTER</h2>
-			</div>
-			<div class="register-main">
-				<div class="col-md-6 account-left">
-                    <form  method="post" action="/register">
-                        {% csrf_token %}
-                        {{ form }}
+		<div class="register-main">
+			<div class="col-md-6 account-left">
+                   <form  method="post" action="/register">
+                       {% csrf_token %}
+                       {{ form }}
 
-				</div>
-				<div class="clearfix"></div>
 			</div>
-			<div class="address submit">
-							<input class="submit-btn" type="submit" value="Подтвердить">
-			</div>
-                    </form>
+			<div class="clearfix"></div>
 		</div>
-	</div>
-	<!--register-end-->
-	<!--information-starts-->
-	<div class="information">
-		<div class="container">
-			<div class="infor-top">
-				<div class="col-md-3 infor-left">
-					<h3>Подписывайтесь на нас</h3>
-					<ul class="footer-social-list">
-						<li><a href="https://web.facebook.com/park.itacademy/?_rdc=1&_rdr"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMmM1LjUxNCAwIDEwIDQuNDg2IDEwIDEwcy00LjQ4NiAxMC0xMCAxMC0xMC00LjQ4Ni0xMC0xMCA0LjQ4Ni0xMCAxMC0xMHptMC0yYy02LjYyNyAwLTEyIDUuMzczLTEyIDEyczUuMzczIDEyIDEyIDEyIDEyLTUuMzczIDEyLTEyLTUuMzczLTEyLTEyLTEyem0tMiAxMGgtMnYyaDJ2Nmgzdi02aDEuODJsLjE4LTJoLTJ2LS44MzNjMC0uNDc4LjA5Ni0uNjY3LjU1OC0uNjY3aDEuNDQydi0yLjVoLTIuNDA0Yy0xLjc5OCAwLTIuNTk2Ljc5Mi0yLjU5NiAyLjMwOHYxLjY5MnoiLz48L3N2Zz4="><h6>Facebook</h6></a></li>
-						<li><a href="https://vk.com/park_itacademy"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMmM1LjUxNCAwIDEwIDQuNDg2IDEwIDEwcy00LjQ4NiAxMC0xMCAxMC0xMC00LjQ4Ni0xMC0xMCA0LjQ4Ni0xMCAxMC0xMHptMC0yYy02LjYyNyAwLTEyIDUuMzczLTEyIDEyczUuMzczIDEyIDEyIDEyIDEyLTUuMzczIDEyLTEyLTUuMzczLTEyLTEyLTEyem0uNTgxIDE1Ljk5N2MuMzA0IDAgLjQyOS0uMjA0LjQyNS0uNDU4LS4wMTYtLjk1OC4zNTYtMS40NzQgMS4wMy0uODAyLjc0NC43NDQuODk2IDEuMjYgMS44MDEgMS4yNmgxLjYwMWMuNDAzIDAgLjU2Mi0uMTMuNTYyLS4zMzQgMC0uNDMyLS43MTEtMS4xOTQtMS4zMTItMS43NTItLjg0NC0uNzgzLS44ODItLjgwMi0uMTU2LTEuNzQ0LjktMS4xNjkgMi4wNzktMi42NjcgMS4wMzctMi42NjdoLTEuOTkxYy0uMzg3IDAtLjQxNC4yMTctLjU1MS41NDItLjQ5OCAxLjE3My0xLjQ0MyAyLjY5My0xLjgwMyAyLjQ2MS0uMzc3LS4yNDMtLjIwNC0xLjIwMy0uMTc1LTIuNjMuMDA4LS4zNzcuMDA2LS42MzYtLjU3MS0uNzctLjMxNC0uMDczLS42MjEtLjEwMy0uOTAzLS4xMDMtMS4xMzcgMC0xLjkyMi40NzctMS40NzcuNTYuNzg1LjE0Ni43MTEgMS44NDYuNTI3IDIuNTgtLjMxOSAxLjI3OC0xLjUxOC0xLjAxMi0yLjAxOC0yLjE1Mi0uMTItLjI3NS0uMTU1LS40ODgtLjU4Ni0uNDg4aC0xLjYyN2MtLjI0NyAwLS4zOTQuMDgtLjM5NC4yNTggMCAuMzAxIDEuNDc5IDMuMzYgMi44OTIgNC44ODUgMS4zNzkgMS40ODcgMi43NDIgMS4zNTQgMy42ODkgMS4zNTR6Ii8+PC9zdmc+"><h6>Vk</h6></a></li>
-						<li><a href="https://t.me/park_itacademy"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj48c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM6c2VyaWY9Imh0dHA6Ly93d3cuc2VyaWYuY29tLyIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxLjQxNDIxOyI+PHBhdGggaWQ9InRlbGVncmFtLTUiIGQ9Ik0xMiwwYy02LjYyNywwIC0xMiw1LjM3MyAtMTIsMTJjMCw2LjYyNyA1LjM3MywxMiAxMiwxMmM2LjYyNywwIDEyLC01LjM3MyAxMiwtMTJjMCwtNi42MjcgLTUuMzczLC0xMiAtMTIsLTEyWm0wLDJjNS41MTQsMCAxMCw0LjQ4NiAxMCwxMGMwLDUuNTE0IC00LjQ4NiwxMCAtMTAsMTBjLTUuNTE0LDAgLTEwLC00LjQ4NiAtMTAsLTEwYzAsLTUuNTE0IDQuNDg2LC0xMCAxMCwtMTBabTIuNjkyLDE0Ljg4OWMwLjE2MSwwLjExNSAwLjM2OCwwLjE0MyAwLjU1MywwLjA3M2MwLjE4NSwtMC4wNyAwLjMyMiwtMC4yMjggMC4zNjIsLTAuNDJjMC40MzUsLTIuMDQyIDEuNDg5LC03LjIxMSAxLjg4NCwtOS4wNjhjMC4wMywtMC4xNCAtMC4wMTksLTAuMjg1IC0wLjEyOSwtMC4zNzljLTAuMTEsLTAuMDkzIC0wLjI2MywtMC4xMiAtMC4zOTksLTAuMDdjLTIuMDk2LDAuNzc2IC04LjU1MywzLjE5OCAtMTEuMTkyLDQuMTc1Yy0wLjE2OCwwLjA2MiAtMC4yNzcsMC4yMjMgLTAuMjcxLDAuNGMwLjAwNiwwLjE3NyAwLjEyNSwwLjMzIDAuMjk2LDAuMzgxYzEuMTg0LDAuMzU0IDIuNzM4LDAuODQ3IDIuNzM4LDAuODQ3YzAsMCAwLjcyNSwyLjE5MyAxLjEwNCwzLjMwOGMwLjA0NywwLjEzOSAwLjE1NywwLjI1IDAuMzAxLDAuMjg3YzAuMTQ1LDAuMDM4IDAuMjk4LC0wLjAwMSAwLjQwNiwtMC4xMDNjMC42MDgsLTAuNTc0IDEuNTQ4LC0xLjQ2MSAxLjU0OCwtMS40NjFjMCwwIDEuNzg2LDEuMzA5IDIuNzk5LDIuMDNabS01LjUwNSwtNC4zMzhsMC44NCwyLjc2OWwwLjE4NiwtMS43NTRjMCwwIDMuMjQzLC0yLjkyNSA1LjA5MiwtNC41OTNjMC4wNTUsLTAuMDQ4IDAuMDYyLC0wLjEzIDAuMDE3LC0wLjE4OGMtMC4wNDUsLTAuMDU3IC0wLjEyNiwtMC4wNzEgLTAuMTg4LC0wLjAzMmMtMi4xNDMsMS4zNjggLTUuOTQ3LDMuNzk4IC01Ljk0NywzLjc5OFoiLz48L3N2Zz4="><h6>Telegram</h6></a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 infor-left">
-					<h3>Информация</h3>
-					<ul>
-						<li><a href="#"><p>Специальные предложения</p></a></li>
-						<li><a href="#"><p>Новые продукты</p></a></li>
-						<li><a href="#"><p>Наши магазины</p></a></li>
-						<li><a href="contact.html"><p>Связаться с нами</p></a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 infor-left">
-					<h3>Мой аккаунт</h3>
-					<ul>
-						<li><a href="account.html"><p>Мой аккаунт</p></a></li>
-						<li><a href="#"><p>Моя история покупок</p></a></li>
-						<li><a href="#"><p>Моя персональная информация</p></a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 infor-left">
-					<h3>Информация о магазине</h3>
-					<h4>Clock Shop,
-						<span>г. Минск,</span>
-						ул. Скрыганова, 14, 5 этаж,
-					<span>м. Молодежная</span></h4>
-					<h5>+375 (29) 222-24-60 MTC</h5>
-					<h5>+375 (44) 570-22-22 A1</h5>
-					<h5>+375 (25) 760-24-60 life :)</h5>
-					<p><a href="mailto:info@it-academy.by">info@it-academy.by</a></p>
-				</div>
-
-				<div class="clearfix"></div>
-			</div>
+		<div class="address submit">
+						<input class="submit-btn" type="submit" value="Подтвердить">
 		</div>
+                   </form>
 	</div>
-	<!--information-end-->
-	<!--footer-starts-->
-	<div class="footer">
-		<div class="container">
-			<div class="footer-top">
-				<div class="col-md-6 footer-left">
-					<form>
-						<input type="text" value="Введите ваш Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Email';}">
-						<input type="submit" value="Подписаться">
-					</form>
-				</div>
-				<div class="col-md-6 footer-right">
-					<p>© 2020 Clock Shop. All Rights Reserved | Design by Sergey Bogachev</p>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
-	<!--footer-end-->
-</body>
-</html>
+</div>
+{% endblock %}

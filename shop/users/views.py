@@ -56,7 +56,7 @@ def login_view(request):
 def verify_view(request):
     secret_ket = request.GET.get('key')
     if request.user.check_key(secret_ket):
-        return render(request, 'register.html')
+        return render(request, 'confirmation_success.html')
     else:
         return redirect("/")
 

@@ -3,7 +3,7 @@
 <header class="header">
     {% if user.is_authenticated %}
         <span style="color: lightblue;">
-            {{ user }}
+            Привет  {{ user }}
         </span>
         <a href="/logout">
             Выйти
@@ -16,5 +16,6 @@
             Войти
         </a>
     {% endif %}
+
 
 </header>

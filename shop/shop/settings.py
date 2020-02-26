@@ -40,14 +40,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'landing.apps.LandingConfig',
-    'users.apps.UsersConfig'
+    'users.apps.UsersConfig',
+    'products.apps.ProductConfig',
+    'orders.apps.OrderConfig',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-#    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -66,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'orders.context_processors.getting_basket_info',
             ],
         },
     },
@@ -134,7 +137,8 @@ STATICFILES_DIRS = [
     '/var/www/static/',
 ]
 
-MEDIA_ROOT = 'data/img'
 MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
